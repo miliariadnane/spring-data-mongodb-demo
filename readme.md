@@ -18,11 +18,15 @@
     - `void deleteById(ID id)`
     - `boolean existsById(ID id)`
 
+## DBRef and Collection Relationships
 
-
-
-
-
+- We can use the `@DBRef` annotation to reference other documents in the database, and create a **relationship** between them.
+- We can use the `@DBRef` annotation in the following way:
+    - `@DBRef`
+    - `@DBRef(lazy = true)` => _Lazy loading_ means that the referenced document will be loaded only when it is accessed.
+    - `@DBRef(lazy = false)` => _Eager loading_ means that the referenced document will be loaded when the parent document is loaded.
+    - `@DBRef(lazy = true, db = "databaseName")` => we can specify the database name in which the referenced document is stored.
+    - `@DBRef(lazy = true, db = "databaseName", collection = "collectionName")` 
 
 
 
