@@ -1,3 +1,6 @@
+# Description 
+
+A demo repository showcasing the capabilities of Spring Data MongoDB, including CRUD operations, custom queries, and integration with a MongoDB database. The project provides a practical and hands-on approach to learning how to use Spring Data MongoDB in a Java-based web application.
 
 ## 1. MongoDB for class
 
@@ -6,11 +9,11 @@
 - We can also specify the name of Document in the `@Document` annotation using the `collection` parameter => `@Document(collection = "users")`
 - If we don't specify a name, the name of the class will be used.
 
-### 2. MongoRepository
+## 2. MongoRepository
 
 - We can use the `MongoRepository` interface to perform CRUD operations on our documents.
 - `MongoRepository` interface extends the `ListCrudRepository` interface, also `PagingAndSortingRepository`.
-- `MongoRepository` interface has the following methods:
+- `MongoRepository` interface has the following methods :
     - `T save(T entity)`
     - `List<T> findAll()`
     - `Optional<T> findById(ID id)`
