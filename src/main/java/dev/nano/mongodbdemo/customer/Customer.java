@@ -8,8 +8,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
 import java.util.List;
-import java.util.zip.Adler32;
 
 @Document(collection = "customers")
 @Data @AllArgsConstructor
@@ -20,6 +20,8 @@ public class Customer {
     private String name;
     private String email;
     private String phone;
+    private BigDecimal salary;
+    private double height;
     @DBRef(lazy = true, db = "addresses")
     private List<Address> addresses;
 }
